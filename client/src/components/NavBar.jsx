@@ -6,6 +6,12 @@ import PropTypes from "prop-types";
 import SearchBar from "./SearchBar";
 import FilterButton from "./FilterButton";
 
+import Logo from "../../../server/public/assets/images/Radio_World.png";
+import Twitter from "../../../server/public/assets/images/twitter.png";
+import Instagram from "../../../server/public/assets/images/instagram.png";
+import Facebook from "../../../server/public/assets/images/Facebook.png";
+import Courrier from "../../../server/public/assets/images/courrier.png";
+
 function NavBar({
   searchValue = "",
   setSearchValue,
@@ -16,11 +22,7 @@ function NavBar({
   return (
     <div className="navbar">
       <div className="container-logo">
-        <img
-          src="src/images/Radio_World.png"
-          className="logoRW"
-          alt="Radio World logo"
-        />
+        <img src={Logo} className="logoRW" alt="Radio World logo" />
       </div>
       <div className="search-feature">
         <div className="Searchbar">
@@ -36,12 +38,12 @@ function NavBar({
       </div>
       <div className="logoRS">
         <div className="RS1">
-          <img src="/twitter.png" alt="Twitter logo" />
-          <img src="/instagram.png" alt="Insta logo" />
+          <img src={Twitter} alt="Twitter logo" />
+          <img src={Instagram} alt="Insta logo" />
         </div>
         <div className="RS2">
-          <img src="/Facebook.png" alt="Fb logo" />
-          <img src="/courrier.png" alt="Contact logo" className="courrier" />
+          <img src={Facebook} alt="Fb logo" />
+          <img src={Courrier} alt="Contact logo" className="courrier" />
         </div>
       </div>
     </div>

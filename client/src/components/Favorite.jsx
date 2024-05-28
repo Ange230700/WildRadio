@@ -1,6 +1,9 @@
 import { useState } from "react";
 import PropTypes from "prop-types";
 
+import EmptyHeart from "../../../server/public/assets/images/empty_heart.png";
+import FullHeart from "../../../server/public/assets/images/full_heart.png";
+
 function Favorite({
   selectedCurrentStationIndex,
   setCurrentStationIndex,
@@ -25,14 +28,7 @@ function Favorite({
 
   return (
     <button className="favorite" type="button" onClick={addFavorite}>
-      <img
-        src={
-          isFavorite === false
-            ? "src/images/empty_heart.png"
-            : "src/images/full_heart.png"
-        }
-        alt="favorite"
-      />
+      <img src={isFavorite === false ? EmptyHeart : FullHeart} alt="favorite" />
     </button>
   );
 }

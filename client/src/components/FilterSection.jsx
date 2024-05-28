@@ -1,8 +1,11 @@
 /* eslint-disable no-nested-ternary */
 import { useState, useEffect } from "react";
 import PropTypes from "prop-types";
+
 import getDataCountry from "../services/countryData";
 import getDataStyle from "../services/styleData";
+
+import closeIcon from "../../../server/public/assets/icons/closeIcon.svg";
 
 function FilterSection({
   setStyleSearchValue,
@@ -88,7 +91,7 @@ function FilterSection({
         className="close-icon-wrapper"
         value={isVisible}
       >
-        <img src="/src/assets/closeIcon.svg" alt="Close icon" />
+        <img src={closeIcon} alt="Close icon" />
       </button>
       <div className="filter-criteria-wrapper">
         <button

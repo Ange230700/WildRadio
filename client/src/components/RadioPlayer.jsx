@@ -1,6 +1,13 @@
 /* Function pour faire fonctionner la radio (play,pause, next,previous) */
 import PropTypes from "prop-types";
 
+import Cassette from "../../../server/public/assets/images/Cassette.png";
+import Cassette2 from "../../../server/public/assets/images/Cassette2.png";
+import precedent from "../../../server/public/assets/images/precedent.png";
+import suivant from "../../../server/public/assets/images/suivant.png";
+import pause from "../../../server/public/assets/images/pause.png";
+import play from "../../../server/public/assets/images/play.png";
+
 function RadioPlayer({
   stations,
   audioPlaying,
@@ -18,7 +25,7 @@ function RadioPlayer({
         <div className="container-animation">
           <div className="animation">
             <img
-              src="./Cassette.png"
+              src={Cassette}
               alt="Cassette"
               className="c1"
               style={{
@@ -26,7 +33,7 @@ function RadioPlayer({
               }}
             />
             <img
-              src="./Cassette2.png"
+              src={Cassette2}
               alt="Cassette2"
               className="c2"
               style={{
@@ -52,13 +59,13 @@ function RadioPlayer({
             aria-hidden="true"
             type="button"
           >
-            <img src="/precedent.png" alt="precedent" />
+            <img src={precedent} alt="precedent" />
           </div>
           <div className="playMusic" onClick={toggleAudio} aria-hidden="true">
             {audioPlaying ? (
-              <img src="/pause.png" alt="Pause" />
+              <img src={pause} alt="Pause" />
             ) : (
-              <img src="/play.png" alt="Play" />
+              <img src={play} alt="Play" />
             )}
           </div>
           <div
@@ -66,7 +73,7 @@ function RadioPlayer({
             onClick={playNextStation}
             aria-hidden="true"
           >
-            <img src="/suivant.png" alt="suivant" />
+            <img src={suivant} alt="suivant" />
           </div>
         </div>
         <div className="radio-selection">

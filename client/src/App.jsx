@@ -1,8 +1,11 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
+
 import NavBar from "./components/NavBar";
 import DisplayRadio from "./components/DisplayRadio";
 import Footer from "./components/Footer";
+
+import Logo from "../../server/public/assets/images/Radio_World.png";
 
 function App() {
   const [radiosRandom, setRadiosRandom] = useState([]);
@@ -116,11 +119,7 @@ function App() {
       />
       {isLoading && (
         <div className="container-loading-logo">
-          <img
-            src="public\Radio_World.png"
-            alt="logo"
-            className="loadingLogo"
-          />
+          <img src={Logo} alt="logo" className="loadingLogo" />
         </div>
       )}
       <div>
