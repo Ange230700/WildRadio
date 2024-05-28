@@ -25,6 +25,7 @@
       {
         "assert": "either"
       }
-    ]
+    ],
+    "import/no-relative-packages": "off"
   }
 }
